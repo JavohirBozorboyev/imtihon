@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Navbar from "../components/Navbar/Navbar";
+import NavigationBar from "../components/Navbar/NavigationBar";
 
 export default function Home() {
   return (
@@ -11,9 +13,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="flex items-center justify-center min-h-[100vh]">
-          <h1 className=" text-sky-400 font-bold text-4xl">Hi Developers</h1>
-        </div>
+        <div>Home page</div>
       </main>
     </div>
   );

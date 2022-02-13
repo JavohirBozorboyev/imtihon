@@ -27,7 +27,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "16px",
+      padding: "10px",
     },
     extend: {
       colors: {
