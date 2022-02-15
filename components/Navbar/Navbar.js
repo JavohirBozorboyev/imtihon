@@ -18,8 +18,8 @@ function Navbar() {
   };
 
   return (
-    <div className="bg-gray-800 h-[56px] flex flex-col justify-center items-center z-[200]  ">
-      <div className="container  flex justify-between items-center">
+    <div className="bg-gray-800 relative sm:bg-transparent  flex flex-col justify-center items-center z-[200]  ">
+      <div className="container relative h-[56px] sm:rounded-md sm:bg-gray-800 flex justify-between items-center">
         <div className="flex justify-between items-center w-[63%] sm:w-[58%] md:w-[55%] xl:w-[54%]">
           <button className="   relative" onClick={toggle}>
             {isActive ? (
@@ -58,22 +58,22 @@ function Navbar() {
         <div
           className={
             isActive
-              ? "absolute  flex flex-col items-center justify-center py-8 opacity-[1]  bg-gray-600 duration-500 -top-[0%]  left-0  mt-[56px] w-full  overflow-hidden"
+              ? "absolute md:container  md:mx-auto md:rounded-md z-[100] flex flex-col items-center justify-center py-8 opacity-[1]  bg-gray-600 duration-500 top-[0%] left-0    mt-[56px] w-full  overflow-hidden"
               : "  hidden opacity-[0]      "
           }
         >
           <Link href="/">
-            <a className="text-white py-2 px-2 " onClick={toggle}>
+            <a className="text-white py-2  " onClick={toggle}>
               About
             </a>
           </Link>
           <Link href="/">
-            <a className="text-white py-2 px-2" onClick={toggle}>
+            <a className="text-white py-2 " onClick={toggle}>
               Contact
             </a>
           </Link>
           <Link href="/">
-            <a className="text-white py-2 px-2" onClick={toggle}>
+            <a className="text-white py-2 " onClick={toggle}>
               Team
             </a>
           </Link>
@@ -98,7 +98,7 @@ function Navbar() {
         </div>
       </div>
       <div className={profil ? "container relative  " : "hidden"}>
-        <div className="absolute mt-3 right-0 px-8 py-2 mr-2 flex flex-col rounded shadow-xl shadow-gray-400  bg-gray-600  ">
+        <div className="absolute z-[100] mt-3 right-0 px-8 py-2 mr-2 flex flex-col rounded shadow-xl shadow-gray-400  bg-gray-600  ">
           <Link href="#">
             <a className="text-white text-md my-1">Your Profil</a>
           </Link>

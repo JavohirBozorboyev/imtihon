@@ -2,11 +2,11 @@ import Link from "next/link";
 import React from "react";
 
 function NavigationBar() {
- 
-    
+
+
   return (
-    <div className=" bg-gray-800 py-2 sm:py-3 fixed w-full bottom-0 z-[1000] ">
-      <div className="container flex justify-between items-center sm:justify-around px-6">
+    <div className=" bg-gray-800 sm:bg-transparent  sm:py-3 fixed w-full bottom-0 z-[1000] ">
+      <div className="container flex justify-between py-2 sm:py-4 sm:rounded-md md:w-8/12 sm:bg-gray-800 items-center sm:justify-around px-6">
         <Link href="/">
           <a className="text-white flex flex-col items-center sm:flex-row">
             <svg
@@ -32,7 +32,7 @@ function NavigationBar() {
             >
               <path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z" />
             </svg>
-            <p className=" text-xs mt-1 sm:ml-2">Test</p>
+            <p className=" text-xs mt-1 sm:ml-2">Exem</p>
           </a>
         </Link>
         <Link href="/groups">
