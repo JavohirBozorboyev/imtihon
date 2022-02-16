@@ -5,7 +5,7 @@ function NavigationBar() {
 
 
   return (
-    <div className=" bg-gray-800 sm:bg-transparent  sm:py-3 fixed w-full bottom-0 z-[1000] ">
+    <div className=" bg-gray-800 sm:bg-transparent   fixed w-full bottom-[0%] z-[1000] ">
       <div className="container flex justify-between py-2 sm:py-4 sm:rounded-md md:w-8/12 sm:bg-gray-800 items-center sm:justify-around px-6">
         <Link href="/">
           <a className="text-white flex flex-col items-center sm:flex-row">

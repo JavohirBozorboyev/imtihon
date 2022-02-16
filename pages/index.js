@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>Home page</div>
+        <div className="container flex items-center justify-center">Home page</div>
       </main>
     </div>
   );

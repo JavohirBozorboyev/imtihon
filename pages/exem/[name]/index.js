@@ -41,7 +41,10 @@ function index() {
   return (
     <div className=" container">
       <h1>Bu usha sahifa {name}</h1>
-      <ThemaList data={res} />
+      <div>
+        
+      </div>
+      <ThemaList data={res}  />
     </div>
   );
 }

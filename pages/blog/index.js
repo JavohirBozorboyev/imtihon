@@ -1,9 +1,10 @@
 import React from 'react'
+import BlogList from '../../components/Blog/BlogList'
 
 function index() {
   return (
     <div>
-        Blog sahifasi
+      <BlogList />
     </div>
   )
 }

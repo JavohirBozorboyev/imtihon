@@ -9,6 +9,7 @@ function ThemaList({data}) {
           <ThemaItem
             key={item.id}
             data={item}
+            
           />
         )
       })}

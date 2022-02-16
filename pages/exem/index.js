@@ -1,6 +1,6 @@
 import React from "react";
 import ExemList from "../../components/Exem/ExemList";
-import { useRouter } from "next/router";
+
 import Head from "next/head";
 
 const data = [
@@ -43,8 +43,7 @@ const data = [
 ];
 
 function index() {
-  const router = useRouter();
-  const { id } = router.query;
+
   return (
     <div>
       <Head>
