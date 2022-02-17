@@ -1,12 +1,38 @@
-import React from 'react'
-import { useRouter} from 'next/router'
+import React from "react";
+import { useRouter } from "next/router";
 
-function index() {
-    const router = useRouter();
-    const {id} = router.query
+
+function index({ article }) {
+  
+  const router = useRouter();
+  const {id} = router.query
   return (
-    <div className='container'> Blog {id}</div>
-  )
+    <div className="container pb-[60px]">
+      
+      <div className="realative h-[400px] bg-sky-300 mt-2 rounded-md">
+        {/* img block */}
+      </div>
+      <div className=" p-2 shadow mt-2 ">
+        <h1 className=" capitalize text-2xl font-bold text-gray-700">{article.title}</h1>
+      </div>
+      <div className=" p-2 shadow mt-2">
+        <p>{article.body}</p>
+      </div>
+    </div>
+  );
 }
 
-export default index
+export default index;
+
+export const getServerSideProps = async (context) => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
+  );
+  const article = await res.json();
+
+  return {
+    props: {
+      article,
+    },
+  };
+};

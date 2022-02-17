@@ -1,19 +1,21 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import QuestionsList from '../../../components/Questions/QuestionsList'
 
 function index() {
     const router = useRouter()
     const { id } = router.query
     
   return (
-    <div className='container'>
+    <div>
+      <div className='container'>{id} sahifasi bu</div>
       
-      {id} sahifasi bu
-
-
+      <div>
+        <QuestionsList />
+      </div>
     </div>
-  )
+  );
 }
 
 export default index
