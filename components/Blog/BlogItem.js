@@ -9,7 +9,7 @@ function BlogItem({ item }) {
   const HeartClick = () => setHeart(!Heart);
   return (
     <>
-      <div className="mt-3 w-full   md:w-[48%] lg:w-[32%] overflow-hidden shadow-md sm:rounded-md border-t-2  bg-white">
+      <div className="mt-3 w-full   md:w-[48%] lg:w-[32%] overflow-hidden shadow-md rounded-md border-t-2  bg-white">
         <div className="flex items-center justify-between px-4">
           <div className="flex justify-between relative items-center py-4">
             <img

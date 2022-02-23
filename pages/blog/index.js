@@ -1,9 +1,13 @@
 import React from 'react'
 import BlogList from '../../components/Blog/BlogList'
+import BlogSearch from '../../components/search/BlogSearch'
 
 function index({posts}) {
   return (
     <div>
+      <div >
+        <BlogSearch />
+      </div>
       <BlogList data={posts} />
     </div>
   )

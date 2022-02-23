@@ -2,6 +2,7 @@ import React from "react";
 import ExemList from "../../components/Exem/ExemList";
 
 import Head from "next/head";
+import ExamHeader from "../../layout/exem/ExamHeader";
 
 const data = [
   {
@@ -51,9 +52,19 @@ function index() {
         <meta name="description" content="Imtihon.uz" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className=" container ">
-        <ExemList data={data} />
-      </div>
+      <main>
+        <div>
+          <ExamHeader />
+        </div>
+        <div className=" ">
+          <div className="container overflow-hidden relative flex justify-center   py-6">
+            <div className="absolute -z-10 left-0 top-0 mt-[42px] w-full h-1 bg-teal-300"></div>
+            <h1 className="text-2xl font-bold z-20 font-serif text-teal-300 lg:text-3xl text-center bg-white px-4 ">Free Examination</h1>
+
+          </div>
+          <ExemList data={data} />
+        </div>
+      </main>
     </div>
   );
 }
