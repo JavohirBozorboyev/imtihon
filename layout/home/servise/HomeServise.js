@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
 function HomeServise() {
   return (
     <div className="container py-8 overflow-hidden flex justify-around flex-wrap  items-center ">
-      <div className="w-full sx:w-10/12 mt-4 sm:w-[48%] lg:w-[32%] flex flex-col justify-center items-center shadow-x4 border-double border-green-300 border-4 shadow-green-300 rounded-md p-4 duration-500 hover:bg-gray-600">
-        <article className="bg-green-300 p-4 rounded-full shadow-x5 shadow-green-300">
+      <div className="w-full sx:w-10/12 mt-4 sm:w-[48%]  flex flex-col justify-center items-center shadow-x4 border-green-300 border-t-4 shadow-green-300 rounded-md p-4 duration-500 ">
+        <article className="bg-green-300 p-4 rounded-full shadow-x4 shadow-green-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="42"
@@ -20,25 +20,9 @@ function HomeServise() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
-      <div className="w-full sx:w-10/12 mt-4  sm:w-[48%] lg:w-[32%] flex flex-col justify-center items-center shadow-x4 shadow-green-300 rounded-md p-4 border-double border-green-300 border-4  duration-500 hover:bg-gray-600">
-        <article className="bg-green-300 p-4 rounded-full shadow-x5 shadow-green-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="42"
-            height="42"
-            viewBox="0 0 24 24"
-            fill="#fff"
-          >
-            <path d="M10.118 16.064c2.293-.529 4.428-.993 3.394-2.945-3.146-5.942-.834-9.119 2.488-9.119 3.388 0 5.644 3.299 2.488 9.119-1.065 1.964 1.149 2.427 3.394 2.945 1.986.459 2.118 1.43 2.118 3.111l-.003.825h-15.994c0-2.196-.176-3.407 2.115-3.936zm-10.116 3.936h6.001c-.028-6.542 2.995-3.697 2.995-8.901 0-2.009-1.311-3.099-2.998-3.099-2.492 0-4.226 2.383-1.866 6.839.775 1.464-.825 1.812-2.545 2.209-1.49.344-1.589 1.072-1.589 2.333l.002.619z" />
-          </svg>
-        </article>
-        <h3 className="text-green-300 text-2xl font-bold  mt-4">Groups</h3>
-        <p className="text-base text-center text-gray-400 mt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div className="w-full mt-4 sx:w-10/12 sm:w-full lg:w-[32%] flex flex-col justify-center items-center shadow-x4 shadow-green-300 rounded-md p-4 border-double border-green-300 border-4  duration-500 hover:bg-gray-600">
-        <article className="bg-green-300 p-4 rounded-full shadow-x5  shadow-green-300">
+     
+      <div className="w-full mt-4 sx:w-10/12 md:w-[48%]  flex flex-col justify-center items-center shadow-x4 shadow-green-300 rounded-md p-4 border-t-4 border-green-300  duration-500 ">
+        <article className="bg-green-300 p-4 rounded-full shadow-x4  shadow-green-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="42"
@@ -58,4 +42,4 @@ function HomeServise() {
   );
 }
 
-export default HomeServise
+export default HomeServise;

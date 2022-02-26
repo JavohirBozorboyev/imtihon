@@ -14,7 +14,7 @@ function index() {
           </p>
           <p className="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500">
             Dont have account?{" "}
-            <Link href="/signin">
+            <Link href="/signup">
               <a className=" focus:text-sky-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-sky-400 cursor-pointer">
                 {" "}
                 Sign up here

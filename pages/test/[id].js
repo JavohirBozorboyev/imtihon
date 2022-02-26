@@ -8,6 +8,7 @@ const TestIdPage = () => {
 
   return <div className="container">
     {router.query.id}
+    <QuestionsList />
     
   </div>;
 };

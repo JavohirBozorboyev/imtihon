@@ -13,11 +13,6 @@ const PageLink = [
     url: "/exem",
   },
   {
-    id: 3,
-    name: "Groups",
-    url: "/groups",
-  },
-  {
     id: 4,
     name: "Blog",
     url: "/blog",
