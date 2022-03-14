@@ -5,6 +5,7 @@ import HomeExemBox from "../layout/home/HomeExemBox/HomeExemBox";
 import HomeBlogBox from "../layout/home/HomeBlogBox/HomeBlogBox";
 import HomeHeader from "../layout/home/HomeHeader/HomeHeader";
 import HomeServise from "../layout/home/servise/HomeServise";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -37,6 +38,10 @@ export default function Home() {
           <HomeBlogBox />
         </div>
         {/* HomeGroupBox */}
+
+        {/* footer */}
+        <Footer />
+        {/* footer */}
       </main>
     </div>
   );

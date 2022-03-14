@@ -3,7 +3,24 @@ import React, { useState} from "react";
 
 function index() {
   const [pas, setPas] = useState(false);
+  const [email, setEmail] = useState("");
+  const [pasText, setPasText] = useState("");
   const openPas = () => setPas(!pas)
+
+  const SubmitLogin = async (e) => {
+    e.preventDefault();
+    await fetch(`http://localhost:3000`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        pas: pasText,
+      }),
+    });
+
+  }
 
   return (
     <div>
@@ -90,6 +107,7 @@ function index() {
               Email
             </label>
             <input
+              onChange={(e) => setEmail(e.target.value)}
               required
               type="email"
               autoComplete="email"
@@ -101,6 +119,7 @@ function index() {
               </label>
               <div className="relative flex items-center justify-center">
                 <input
+                  onChange={e=> setPasText(e.target.value)}
                   type={pas ? "text" : "password"}
                   autoComplete="password"
                   className="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
@@ -123,6 +142,7 @@ function index() {
             </div>
             <div className="mt-8">
               <button
+                onClick={SubmitLogin}
                 type="button"
                 className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
               >

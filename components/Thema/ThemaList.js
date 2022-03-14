@@ -1,8 +1,8 @@
 import React from 'react'
 import ThemaItem from './ThemaItem'
 
-function ThemaList({data, pname}) {
-  console.log(pname);
+function ThemaList({data, tName}) {
+
   return (
     <div className=' flex flex-col items-center pb-[70px] justify-between flex-wrap sm:flex-row'>
       {data.map(item => {
@@ -10,8 +10,7 @@ function ThemaList({data, pname}) {
           <ThemaItem
             key={item.id}
             data={item}
-            pname={pname}
-            
+            tName={tName}
           />
         )
       })}

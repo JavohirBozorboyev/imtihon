@@ -32,8 +32,8 @@ function HomeHeader() {
               </Link>
             </div>
           </div>
-          <div className="w-full md:w-6/12 mt-10 md:mt-0 ">
-            <Image src={hbanner} layout="responsive" />
+          <div className="w-full flex justify-end border-2 border-green-300 rounded-md md:w-6/12 mt-10 md:mt-0 ">
+            <Image src={hbanner} width={550} height={550} objectFit="cover" />
           </div>
 
           <div>

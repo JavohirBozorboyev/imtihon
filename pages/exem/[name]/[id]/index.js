@@ -2,9 +2,9 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-
 function index() {
   const router = useRouter();
+  const { name } = router.query;
   const { id } = router.query;
 
   const [questions, setQuestions] = React.useState(10);
@@ -25,7 +25,8 @@ function index() {
       },
       body: JSON.stringify({
         question: questions,
-        time: time,
+        FName: name,
+        id: id,
       }),
     });
 

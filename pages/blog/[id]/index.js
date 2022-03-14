@@ -1,19 +1,18 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-
 function index({ article }) {
-  
   const router = useRouter();
-  const {id} = router.query
+  const { id } = router.query;
   return (
     <div className="container pb-[60px]">
-      
       <div className="realative h-[400px] bg-sky-300 mt-2 rounded-md">
         {/* img block */}
       </div>
       <div className=" p-2 shadow mt-2 ">
-        <h1 className=" capitalize text-2xl font-bold text-gray-700">{article.title}</h1>
+        <h1 className=" capitalize text-2xl font-bold text-gray-700">
+          {article.title}
+        </h1>
       </div>
       <div className=" p-2 shadow mt-2">
         <p>{article.body}</p>

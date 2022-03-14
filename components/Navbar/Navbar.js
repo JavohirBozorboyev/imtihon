@@ -12,11 +12,6 @@ const PageLink = [
     name: "Exam",
     url: "/exem",
   },
-  {
-    id: 4,
-    name: "Blog",
-    url: "/blog",
-  },
 ];
 
 function Navbar() {
@@ -31,7 +26,7 @@ function Navbar() {
         <div className="flex justify-between items-center w-full md:w-[33%] ">
           <Link href="/">
             <a className="text-green-400 font-serif mr-4 uppercase text-xl font-extrabold  ">
-              Imtihon
+              On-Exam
             </a>
           </Link>
           <button className=" md:hidden   relative" onClick={toggle}>
@@ -64,26 +59,29 @@ function Navbar() {
             )}
           </button>
         </div>
-        <div className="hidden md:flex justify-center items-center md:w-[33%]">
-          {PageLink.map((link) => {
-            return (
-              <Link key={link.id} href={link.url}>
-                <a className="text-gray-400 ml-4 font-bold transition-all duration-400 hover:text-green-300 ">
-                  {link.name}
-                </a>
-              </Link>
-            );
-          })}
-          {/* md:relative md:mt-0 md:bg-transparent md:w-[33%] flex items-center flex-col md:flex-row justify-end */}
-        </div>
+
+        {/* <div>
+          salom
+        </div> */}
 
         <div
           className={
             isActive
-              ? "  bg-gray-700 absolute left-0 right-0 top-0 mt-[56px] py-6 flex items-center justify-center"
-              : "hidden md:flex md:w-[33%] justify-end"
+              ? "  bg-gray-700 absolute left-0 right-0 top-0  mt-[56px] py-6 flex flex-col md:flex-row items-center justify-center"
+              : "hidden md:flex md:w-[70%] items-center justify-end"
           }
         >
+          <div className=" md:mr-8 flex flex-col md:flex-row justify-center items-center ">
+            {PageLink.map((link) => {
+              return (
+                <Link key={link.id} href={link.url}>
+                  <a className="text-gray-400 mt-4 md:mt-0 md:ml-4 font-bold transition-all duration-400 hover:text-green-300 ">
+                    {link.name}
+                  </a>
+                </Link>
+              );
+            })}
+          </div>
           <div className="mt-8 md:mt-0">
             <Link href="/login">
               <a className=" ml-4 font-bold transition-all duration-400 bg-green-300 border-2 border-green-300 text-white px-4 py-1 rounded ">

@@ -40,7 +40,7 @@ function index() {
   const { name } = router.query;
   return (
     <div className=" container">
-      <ThemaList data={res} pname={name}  />
+       <ThemaList data={res} tName={name} />
     </div>
   );
 }

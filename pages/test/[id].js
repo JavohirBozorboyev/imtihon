@@ -4,10 +4,14 @@ import QuestionsList from "../../components/Questions/QuestionsList";
 
 const TestIdPage = () => {
   const router = useRouter();
+
+  const { name } = router.query;
+  const { id } = router.query;
   
 
   return <div className="container">
-    {router.query.id}
+    {id}
+    {name}
     <QuestionsList />
     
   </div>;

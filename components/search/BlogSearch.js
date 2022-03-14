@@ -27,7 +27,7 @@ function BlogSearch() {
           </svg>
         </div>
 
-        <div className=" flex flex-row items-center mt-4 py-2 overflow-x-scroll rounded-md px-1 cursor-pointer ">
+        {/* <div className=" flex flex-row items-center mt-4 py-2 overflow-x-scroll rounded-md px-1 cursor-pointer ">
           <p className="text-sm  text-sky-300  py-1 px-2   rounded ">#All</p>
           <p className="text-sm  text-gray-400  py-1 px-2   rounded">
             #Matematika
@@ -41,7 +41,7 @@ function BlogSearch() {
           <p className="text-sm  text-gray-400  py-1 px-2   rounded">
             #Geografiya
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

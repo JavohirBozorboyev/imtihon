@@ -3,6 +3,31 @@ import Link from "next/link";
 
 function index() {
   const [pas, setPas] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [pasText, setPasText] = useState("");
+
+  
+
+  const PasTextInfo = (e) => {
+    setPasText(e.target.value);
+    
+  }
+ const SubmitForm = async (e) => {
+   // e.preventDefault();
+   await fetch(`http://localhost:3000`, {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify({
+        name: name,
+        email: email,
+        pas: pasText,
+     }),
+   });
+
+ };
   const openPas = () => setPas(!pas);
   return (
     <div>
@@ -90,6 +115,7 @@ function index() {
                 Name
               </label>
               <input
+                onChange={(e) => setName(e.target.value)}
                 required
                 autoComplete="true"
                 type="text"
@@ -104,6 +130,7 @@ function index() {
                 Email
               </label>
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 type="email"
                 autoComplete="true"
@@ -114,8 +141,10 @@ function index() {
               <label className="text-sm font-medium leading-none text-gray-800">
                 Password
               </label>
+
               <div className="relative flex items-center justify-center">
                 <input
+                  onChange={PasTextInfo}
                   type={pas ? "text" : "password"}
                   autoComplete="true"
                   className="bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
@@ -142,6 +171,7 @@ function index() {
             <div className="mt-8">
               <button
                 type="button"
+                onClick={SubmitForm}
                 className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
               >
                 Create my account

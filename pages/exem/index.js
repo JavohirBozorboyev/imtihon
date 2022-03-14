@@ -5,6 +5,7 @@ import ExamHeader from "../../layout/exem/ExamHeader";
 import MExemList from "../../components/Exem/MExemList";
 import ExamP1 from "../../img/ExamP1.png";
 import Image from "next/image";
+import Footer from '../../components/Footer/Footer'
 
 const data = [
   {
@@ -106,6 +107,10 @@ function index() {
           </div>
           <MExemList data={data} />
         </div>
+
+        {/* footer */}
+        <Footer />
+        {/* footer */}
       </main>
     </div>
   );

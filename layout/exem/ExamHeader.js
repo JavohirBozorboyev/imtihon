@@ -17,8 +17,8 @@ function ExamHeader() {
           
         </div>
       </div>
-      <div className="w-full md:w-6/12">
-        <Image src={ExamBanner} layout="responsive" objectFit="cover" />
+      <div className="w-full relative md:w-6/12 sm:p-4 ">
+        <Image src={ExamBanner}  objectFit="cover" />
       </div>
     </div>
   );
