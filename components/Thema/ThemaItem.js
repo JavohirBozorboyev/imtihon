@@ -3,15 +3,15 @@ import React from 'react'
 
 function ThemaItem({data,tName}) {
   return (
-    <Link href="/exem/[name]/[id]" as={`/exem/${tName}/${data.id}`} >
+    <Link href="/exem/[name]/[id]" as={`/exem/${tName}/${data.id}`}>
       <a className=" relative w-full overflow-hidden z-50  sm:w-[48%] md:w-[30%] lg:w-[32%]  rounded p-2 my-2 flex flex-col cursor-pointer shadow-md border-t-4 border-green-300  transition-all hover:bg-green-300">
         <div className=" text-center py-2 ">
-          <p className="text-gray-700 text-xl z-10 capitalize">
-            {data.name}
-          </p>
+          <p className="text-gray-700 text-xl z-10 capitalize">{data.title}</p>
         </div>
         <div className="flex justify-end">
-          <p className="text-gray-500 text-base ">{data.total} Tests</p>
+          <p className="text-gray-500 text-base ">
+            {data.total_question} Questions
+          </p>
         </div>
 
         <div className=" absolute -z-10  left-[0%] p-2 top-[15%] overflow-hidden  bottom-[-20%] w-20 h-[150%]  opacity-[0.5] rotate-[30deg] bg-green-300 rounded-md">
@@ -27,7 +27,6 @@ function ThemaItem({data,tName}) {
         </div>
       </a>
     </Link>
-    
   );
 }
 

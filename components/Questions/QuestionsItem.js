@@ -3,7 +3,7 @@ import React from "react";
 function QuestionsItem({ item }) {
   return (
     <div className=" shadow-md mt-4 rounded-md cursor-pointer overflow-hidden">
-      <div className=" flex items-center bg-gray-600  p-2 py-4 overflow-hidden">
+      {/* <div className=" flex items-center bg-gray-600  p-2 py-4 overflow-hidden">
         <p className="   text-xl text-white font-bold">1</p>
         <p className=" ml-6 text-justify text-lg text-white pr-1">
           Maxsus Savollar to'plami Va maxsus savol. Lorem ipsum dolor sit amet
@@ -45,7 +45,7 @@ function QuestionsItem({ item }) {
           consectetur adipisicing elit. Similique beatae repellendus fugit fuga
           perspiciatis eius autem ea porro voluptatem .
         </label>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -12,6 +12,11 @@ const PageLink = [
     name: "Exam",
     url: "/exem",
   },
+  {
+    id: 3,
+    name: "Blog",
+    url: "/blog",
+  }
 ];
 
 function Navbar() {
@@ -60,9 +65,7 @@ function Navbar() {
           </button>
         </div>
 
-        {/* <div>
-          salom
-        </div> */}
+       
 
         <div
           className={
@@ -82,14 +85,14 @@ function Navbar() {
               );
             })}
           </div>
-          <div className="mt-8 md:mt-0">
+          <div className="mt-8 md:mt-0 flex flex-wrap justify-center">
             <Link href="/login">
-              <a className=" ml-4 font-bold transition-all duration-400 bg-green-300 border-2 border-green-300 text-white px-4 py-1 rounded ">
+              <a className=" ml-4  mt-2 md:mt-0 font-bold transition-all duration-400 bg-green-300 border-2 border-green-300 text-white px-4 py-1 rounded ">
                 Login In
               </a>
             </Link>
             <Link href="/signup">
-              <a className="ml-4 font-bold transition-all duration-400 border-2 border-green-300 text-green-300 px-4 py-1 rounded">
+              <a className="ml-4 mt-2 md:mt-0 font-bold transition-all duration-400 border-2 border-green-300 text-green-300 px-4 py-1 rounded">
                 Sign Up
               </a>
             </Link>

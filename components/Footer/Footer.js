@@ -10,13 +10,13 @@ function Footer() {
           <Link href="/">
             <a className=" text-green-300 text-xl font-serif ">On-Exam</a>
           </Link>
-          <Link href="">
+          <Link href="/">
             <a className=" text-white  mt-4 md:mt-0 md:ml-4 ">Home</a>
           </Link>
-          <Link href="">
+          <Link href="/">
             <a className=" text-white  mt-4 md:mt-0 md:ml-4  ">About</a>
           </Link>
-          <Link href="">
+          <Link href="/">
             <a className=" text-white  mt-4 md:mt-0 md:ml-4  ">Info</a>
           </Link>
         </div>

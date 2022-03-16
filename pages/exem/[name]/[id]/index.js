@@ -1,8 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import ExamThema from "..";
 
-function index() {
+const ExemThemaId=()=> {
   const router = useRouter();
   const { name } = router.query;
   const { id } = router.query;
@@ -85,4 +86,4 @@ function index() {
   );
 }
 
-export default index;
+export default ExemThemaId;

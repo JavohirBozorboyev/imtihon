@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState} from "react";
 
-function index() {
+const Login=()=> {
   const [pas, setPas] = useState(false);
   const [email, setEmail] = useState("");
   const [pasText, setPasText] = useState("");
@@ -157,4 +157,4 @@ function index() {
   );
 }
 
-export default index;
+export default Login;

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Link from "next/link";
 
-function index() {
+const Signup=()=> {
   const [pas, setPas] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -184,4 +184,4 @@ function index() {
   );
 }
 
-export default index;
+export default Signup;

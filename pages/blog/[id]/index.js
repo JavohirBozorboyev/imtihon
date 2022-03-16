@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-function index({ article }) {
+const  BlogId = ({ article })=> {
   const router = useRouter();
   const { id } = router.query;
   return (
@@ -21,7 +21,7 @@ function index({ article }) {
   );
 }
 
-export default index;
+export default BlogId;
 
 export const getServerSideProps = async (context) => {
   const res = await fetch(
