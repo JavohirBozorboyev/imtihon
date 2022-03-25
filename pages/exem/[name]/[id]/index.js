@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import ExamThema from "..";
+import QuestionsList from "../../../../components/Questions/QuestionsList";
 
-const ExemThemaId=()=> {
+const ExemThemaId = () => {
   const router = useRouter();
   const { name } = router.query;
   const { id } = router.query;
-
-  const [questions, setQuestions] = React.useState(10);
-  const [time, setTime] = React.useState(15);
+  const [data, setData] = useState([]);
+  const [questions, setQuestions] = useState(10);
+  const [time, setTime] = useState(15);
+  const [trueAns, setTrueAns] = useState(0);
+  const [endbtn, setEndbtn] = useState(false);
+  
 
   const handleSetQuestions = (e) => {
     setQuestions(e.target.value);
@@ -17,22 +19,18 @@ const ExemThemaId=()=> {
   const handleSetTime = (e) => {
     setTime(e.target.value);
   };
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
-    await fetch(`http://localhost:3000/test/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        question: questions,
-        FName: name,
-        id: id,
-      }),
-    });
 
-    router.push(`/test/${id}`);
+  const handleSubmit = async (e) => {
+    fetch(`https://onexam.uz/public/api/randoms/${name}/${id}/${questions}`)
+      .then((response) => response.json())
+      .then((data) => setData(data));
+
+    // router.push(`/test/${id}`);
   };
+
+  const SubmitBtn = () => setEndbtn(!endbtn);
+  console.log("to'g'ri javoblar soni: ", trueAns);
+
   return (
     <div>
       <div className="container bg-white w-full sm:w-8/12 md:w-6/12 lg:w-4/12 shadow min-h-[80vh] mt-2 mb-[65px] py-4 rounded flex flex-col justify-between">
@@ -40,8 +38,6 @@ const ExemThemaId=()=> {
           <div className="flex items-center justify-between  shadow p-2 rounded">
             <p className="text-xl text-gray-700">Testlar Soni:</p>
             <select
-              name=""
-              id=""
               value={questions}
               className="p-2 ml-2 rounded text-gray-600 outline-none font-bold shadow"
               onChange={handleSetQuestions}
@@ -56,8 +52,6 @@ const ExemThemaId=()=> {
           <div className="flex items-center justify-between mt-4 shadow p-2 rounded">
             <p className="text-xl   text-gray-700">Testlar Vaqti:</p>
             <select
-              name=""
-              id=""
               className="p-2 ml-2 rounded outline-none shadow text-gray-600 font-bold"
               onChange={handleSetTime}
             >
@@ -82,8 +76,27 @@ const ExemThemaId=()=> {
           </button>
         </div>
       </div>
+
+      <QuestionsList
+        data={data}
+        trueAns={trueAns}
+        setTrueAns={setTrueAns}
+        endbtn={endbtn}
+        setEndbtn={setEndbtn}
+       
+        
+      />
+
+      <div className="pb-20 flex justify-center">
+        <button
+          onClick={SubmitBtn}
+          className=" p-2 px-6 text-white font-bold bg-green-300 rounded-md duration-300  hover:scale-95"
+        >
+          Submit
+        </button>
+      </div>
     </div>
   );
-}
+};
 
 export default ExemThemaId;

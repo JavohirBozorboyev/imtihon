@@ -4,7 +4,6 @@ import ThemaList from "../../../components/Thema/ThemaList";
 
 
 const ExemThema = ({ data }) => {
-  console.log(data);
   const router = useRouter();
   const { name } = router.query;
 
